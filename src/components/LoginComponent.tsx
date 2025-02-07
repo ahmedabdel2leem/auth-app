@@ -27,7 +27,7 @@ export default function LoginComponent() {
     const email = (target.elements.namedItem("email") as HTMLInputElement).value;
     const password = (target.elements.namedItem("password") as HTMLInputElement).value;
 
-    const response = await fetch("http://localhost:3001/api/auth/signin", {
+    const response = await fetch("https://auth-app-tau-ten.vercel.app/api/auth/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
